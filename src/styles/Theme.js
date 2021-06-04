@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-export const color = {
+export const baseColor = {
     primary: {
         100:'#315E68',
         90:'#3E8194',
@@ -48,22 +48,28 @@ export const color = {
         30:'#B5B9BA',
         20:'#CDD0D1',
         10:'#E6E8E8',
-        5:'#F3F3F4',   
+        5:'#F3F3F4',
     },
-    White: {
-        100: #fff,
+    white: {
+        100: '#fff',
     },
 }
 
-export const typography = {
-    headline1: headline1,
-    headline2: headline2,
-    headline3: headline3,
-    body: {
-        normal: bodyNormal,
-        bold: bodyBold,
+export const color = {
+    text: {
+        highEmphasis: baseColor.gray[100],
+        middleEmphasis: baseColor.gray[70],
+        lowEmphasis: baseColor.gray[50],
+        accentPrimary: baseColor.primary[100],
+        accentSecondary: baseColor.accent[80],
+        disable: baseColor.gray[30],
     },
-    overline: overline,
+    background: baseColor.gray[5],
+    surface: {
+        primary: baseColor.white,
+        secondary: baseColor.gray[5],
+        teriary: baseColor.gray[10],
+    },
 }
 
  const headline1 = css`
@@ -101,3 +107,15 @@ export const typography = {
     line-height: 1.5;
     letter-spacing: 2%;
 `
+
+export const typography = {
+    headline1: headline1,
+    headline2: headline2,
+    headline3: headline3,
+    body: {
+        normal: bodyNormal,
+        bold: bodyBold,
+    },
+    overline: overline,
+}
+
