@@ -295,10 +295,6 @@ const base = css`
         ${typography.body.normal};
     }
 
-    img {
-        max-width: 100%;
-    }
-
     a {
         color: inherit;
     }

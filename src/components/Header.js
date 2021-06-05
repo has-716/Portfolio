@@ -18,6 +18,7 @@ const root = css`
     padding: ${size[24]};
     position: sticky;
     top: 0;
+    z-index: 1;
 `
 
 const logo = css`

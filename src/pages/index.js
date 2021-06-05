@@ -7,14 +7,14 @@ import { GlobalStyle } from "../styles/GlobalStyle"
 import { size } from "../styles/Size"
 import { color, typography } from "../styles/Theme"
 import { Header } from "../components/Header"
+import { MainVisual } from "../components/MainVisual"
 
 const IndexPage = () => {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <StaticImage src="../images/icon.png"/>
-      <h1>hoge</h1>
+      <MainVisual />
     </>
   )
 }

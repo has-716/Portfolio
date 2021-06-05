@@ -76,25 +76,28 @@ export const color = {
     font-size: 64px;
     font-weight: bold;
     line-height: 1.5;
-    letter-spacing: 1%;
+    letter-spacing: .01em;
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 `
 
  const headline2 = css`
     font-size: 40px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: .02em;
 `
 
  const headline3 = css`
     font-size: 24px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: .02em;
 `
 
  const bodyNormal = css`
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 1%;
+    letter-spacing: .01em;
 `
 
  const bodyBold = css`
@@ -105,7 +108,7 @@ export const color = {
  const overline = css`
     font-size: 12px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: .02em;
 `
 
 export const typography = {
