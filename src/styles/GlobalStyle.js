@@ -78,6 +78,7 @@ abbr[title] {
 
 a {
   background-color: transparent; /* Remove the gray background on active links in IE 10 */
+  text-decoration: none;
 }
 
 a:active,

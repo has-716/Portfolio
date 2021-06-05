@@ -8,13 +8,16 @@ import { size } from "../styles/Size"
 import { color, typography } from "../styles/Theme"
 import { Header } from "../components/Header"
 import { MainVisual } from "../components/MainVisual"
+import Layout from "./Layout"
 
 const IndexPage = () => {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <MainVisual />
+      <Layout>
+        <MainVisual />
+      </Layout>
     </>
   )
 }

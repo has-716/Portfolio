@@ -19,10 +19,34 @@ const root = css`
     position: sticky;
     top: 0;
     z-index: 1;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        height: 88px;
+    }
 `
 
 const logo = css`
     fill: ${baseColor.primary[80]};
+`
+
+const navigation = css`
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+const navigationItem = css`
+    padding: ${size[8]} ${size[24]};
+    :hover {
+        background-color: ${color.surface.teriary};
+        border-radius: 4px;
+    }
+`
+const navigationDivider = css`
+    ${typography.headline3}
+    color: ${color.text.disable};
+    margin: 0 ${size[8]};
 `
 
 export const Header = () => (
@@ -30,5 +54,14 @@ export const Header = () => (
         <Link to="/">
             <Icon css={logo}/>
         </Link>
+        <nav css={navigation}>
+            <Link css={navigationItem} to="#works">
+                <p>works</p>
+            </Link>
+            <span css={navigationDivider}>/</span>
+            <Link css={navigationItem} to="#about">
+                <p>about</p>
+            </Link>
+        </nav>
     </header>
 )

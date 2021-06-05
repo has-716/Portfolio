@@ -7,10 +7,11 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Icon from "../../images/icon/oskworks.svg"
 
 const root = css`
     position: relative;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
 `
 
 const title = css`
@@ -32,7 +33,7 @@ const titleLabel = css`
 
 export const MainVisual= () => (
     <div css={root}>
-        <StaticImage src="../../images/mainVisual.jpg" />
+        <StaticImage src="../../images/mainVisual.jpg" layout="fullWidth" />
         <h1 css={title}>
             <span css={titleLabel}>osk</span><br/>
             <span css={titleLabel}>portfolio</span>
