@@ -15,6 +15,7 @@ const reset = css`
    # ================================================================= */
 
 html {
+  background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
   -webkit-text-size-adjust: 100%;
@@ -77,6 +78,7 @@ abbr[title] {
 
 a {
   background-color: transparent; /* Remove the gray background on active links in IE 10 */
+  text-decoration: none;
 }
 
 a:active,
@@ -292,10 +294,6 @@ progress {
 const base = css`
     body {
         ${typography.body.normal};
-    }
-
-    img {
-        max-width: 100%;
     }
 
     a {
