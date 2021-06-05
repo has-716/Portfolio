@@ -25,5 +25,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/, // 読み込みたいSVGファイルが置いてあるフォルダを指定する
+        },
+      },
+    },
   ],
 };

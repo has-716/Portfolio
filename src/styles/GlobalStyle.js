@@ -15,6 +15,7 @@ const reset = css`
    # ================================================================= */
 
 html {
+  background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
   -webkit-text-size-adjust: 100%;
