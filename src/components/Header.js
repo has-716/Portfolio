@@ -22,6 +22,7 @@ const root = css`
     justify-content: space-between;
     @media (max-width: 768px) {
         height: 88px;
+        position: static;
     }
 `
 

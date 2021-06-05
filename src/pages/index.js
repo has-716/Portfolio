@@ -9,6 +9,10 @@ import { color, typography } from "../styles/Theme"
 import { Header } from "../components/Header"
 import { MainVisual } from "../components/MainVisual"
 import Layout from "./Layout"
+import { Works } from "../components/Works"
+
+const margin = css`
+`
 
 const IndexPage = () => {
   return (
@@ -17,6 +21,7 @@ const IndexPage = () => {
       <Header />
       <Layout>
         <MainVisual />
+        <Works css={margin} />
       </Layout>
     </>
   )

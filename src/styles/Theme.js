@@ -66,7 +66,7 @@ export const color = {
     },
     background: baseColor.gray[5],
     surface: {
-        primary: baseColor.white,
+        primary: baseColor.white[100],
         secondary: baseColor.gray[5],
         teriary: baseColor.gray[10],
     },
