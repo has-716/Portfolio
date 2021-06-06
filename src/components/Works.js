@@ -7,34 +7,45 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { About } from "./About"
 
 const root = css`
     background: ${color.surface.primary};
-    width: 100vw;
-    margin: ${size[56]} calc(50% - 50vw);
-    padding: 104px ${size[24]};
+    padding: 104px 24px;
+    margin-top: 32px;
     @media (max-width: 768px) {
-        padding: ${size[32]} ${size[16]};
+        padding: 24px 16px 32px;
+        margin-top: 24px;
     }
 `
 
 const title = css`
+    color: ${color.text.highEmphasis};
     ${typography.headline2}
 `
 
 const cardWrapper = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288px,1fr));
-  grid-auto-rows: 1fr;
-  grid-gap: ${size[16]};
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    grid-gap: 16px;
+    margin-top: 32px;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1,12fr);
+        margin-top: 24px;
+    }
 `
 const card = css`
-    margin-top: 32px;
     padding: ${size[24]};
     @media (max-width: 768px) {
         padding: 0;
+        :not(:first-child) {
+            margin-top: 16px;
+        }
+        :hover {
+            background-color: ${color.surface.teriary};
+            border-radius: 4px;
+        }
     }
-
 `
 const cardContent = css`
     margin-top: ${size[8]};
@@ -61,33 +72,53 @@ const cardDate = css`
     
 `
 const cardTitle = css`
-    margin-top: ${size[8]};
+    margin-top: ${size[4]};
 `
 const cardDescription = css`
     color: ${color.text.lowEmphasis};
 `
 
+const about = css`
+    display: grid;
+    grid-template-columns: repeat(2,6fr);
+    grid-gap: 16px;
+    margin-top: 32px;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1,12fr);
+        margin-top: 24px;
+    }
+`
+const aboutContent = css`
+
+`
+const aboutInfomation = css`
+
+`
+
 
 export const Works= () => (
-    <section css={root}>
-        <h2 css={title}>Works</h2>
-        <Link css={cardWrapper} to="/">
-            <div css={card}>
-                <StaticImage src="../../images/dummy.jpg" />
-                <div css={cardContent}>
-                <div css={cardInfomation}>
-                    <p css={cardGenreWrapper}>
-                        <span css={cardGenre}>Genre</span>
-                        <span css={cardGenre}>Genre</span>
-                    </p>
-                    <p css={cardDate}>2021/01/01</p>
-                </div>
-                <h3 css={cardTitle}>Title</h3>
-                <p css={cardDescription}>Description</p>
-                </div>
+    <>
+        <section css={root} id="works">
+            <h2 css={title}>works</h2>
+            <div css={cardWrapper}>
+                <Link css={card} to="/">
+                    <StaticImage src="../../images/dummy.jpg" />
+                    <div css={cardContent}>
+                        <div css={cardInfomation}>
+                            <p css={cardGenreWrapper}>
+                                <span css={cardGenre}>Genre</span>
+                                <span css={cardGenre}>Genre</span>
+                            </p>
+                            <p css={cardDate}>2021/01/01</p>
+                        </div>
+                        <h3 css={cardTitle}>Title</h3>
+                        <p css={cardDescription}>Description</p>
+                    </div>
+                </Link>
+                <div css={card}></div>
+                <div css={card}></div>
             </div>
-            <div css={card}></div>
-            <div css={card}></div>
-        </Link>
-    </section>
+        </section>
+        <About/>
+    </>
 )

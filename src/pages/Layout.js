@@ -3,7 +3,10 @@ import { css } from '@emotion/react'
 
 const root = css`
     margin: 0 auto;
-    max-width: 1280px;
+    width: 88.88%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 const Layout = ({ children }) => {

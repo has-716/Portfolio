@@ -10,9 +10,7 @@ import { Header } from "../components/Header"
 import { MainVisual } from "../components/MainVisual"
 import Layout from "./Layout"
 import { Works } from "../components/Works"
-
-const margin = css`
-`
+import { SNSLink } from "../components/SNSLink"
 
 const IndexPage = () => {
   return (
@@ -21,7 +19,8 @@ const IndexPage = () => {
       <Header />
       <Layout>
         <MainVisual />
-        <Works css={margin} />
+        <Works />
+        <SNSLink />
       </Layout>
     </>
   )
