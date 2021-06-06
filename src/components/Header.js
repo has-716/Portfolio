@@ -7,7 +7,7 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Icon from "../../images/icon/oskworks.svg"
+import Logo from "../../images/icon/oskworks.svg"
 
 const root = css`
     align-items: center;
@@ -53,7 +53,7 @@ const navigationDivider = css`
 export const Header = () => (
     <header css={root}>
         <Link to="/">
-            <Icon css={logo}/>
+            <Logo css={logo}/>
         </Link>
         <nav css={navigation}>
             <Link css={navigationItem} to="#works">
