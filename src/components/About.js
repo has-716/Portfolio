@@ -7,13 +7,13 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Name from "../../images/icon/osk.svg"
+import Name from "../../contents/images/icon/osk.svg"
 
 const root = css`
     background: ${color.surface.primary};
     display: flex;
     margin-top: 32px;
-    padding: 104px 24px;
+    padding: 104px 64px;
     @media (max-width: 768px) {
         grid-template-columns: repeat(1,12fr);
         padding: 24px 16px 32px;
@@ -63,7 +63,7 @@ const introduction = css`
 
 export const About = () => (
     <section css={root}>
-        <StaticImage src="../../images/dummy.jpg" css={image} />
+        <StaticImage src="../../contents/images/dummy.jpg" css={image} />
         <div css={infomation}>
                 <h2 css={title}>about</h2>
                     <div css={content}>

@@ -6,6 +6,13 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `./contents/works/`,
+      },
+    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -21,7 +28,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: "./contents/works/",
       },
       __key: "pages",
     },
@@ -29,7 +36,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/, // 読み込みたいSVGファイルが置いてあるフォルダを指定する
+          include: /contents/,
         },
       },
     },
