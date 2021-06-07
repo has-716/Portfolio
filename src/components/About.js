@@ -13,7 +13,7 @@ const root = css`
     background: ${color.surface.primary};
     display: flex;
     margin-top: 32px;
-    padding: 104px 24px;
+    padding: 104px 64px;
     @media (max-width: 768px) {
         grid-template-columns: repeat(1,12fr);
         padding: 24px 16px 32px;

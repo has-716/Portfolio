@@ -11,7 +11,7 @@ import { About } from "./About"
 
 const root = css`
     background: ${color.surface.primary};
-    padding: 104px 24px;
+    padding: 104px 64px;
     margin-top: 32px;
     @media (max-width: 768px) {
         padding: 24px 16px 32px;
