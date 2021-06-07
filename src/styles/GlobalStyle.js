@@ -2,6 +2,14 @@ import React from 'react'
 
 import { Global, css } from '@emotion/react'
 import { color, typography } from './Theme'
+import 'fontsource-noto-sans-jp'
+import 'fontsource-noto-sans-jp/100.css'
+import 'fontsource-noto-sans-jp/300.css'
+import 'fontsource-noto-sans-jp/400.css'
+import 'fontsource-noto-sans-jp/500.css'
+import 'fontsource-noto-sans-jp/700.css'
+import 'fontsource-noto-sans-jp/900.css'
+
 
 const reset = css`
 /*!
@@ -18,6 +26,7 @@ html {
   background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-text-size-adjust: 100%;
   word-break: normal;
   -moz-tab-size: 4;
