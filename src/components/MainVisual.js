@@ -26,6 +26,7 @@ const title = css`
 const titleLabel = css`
     background-color:${baseColor.white[100]};
     display: inline-block;
+    padding: 4px 0;
     :not(:first-child) {
         margin-top: 0.2em;  
     }
@@ -33,7 +34,7 @@ const titleLabel = css`
 
 export const MainVisual= () => (
     <div css={root}>
-        <StaticImage src="../../images/mainVisual.jpg" layout="fullWidth" />
+        <StaticImage src="../../contents/images/mainVisual.jpg" layout="fullWidth" />
         <h1 css={title}>
             <span css={titleLabel}>osk</span><br/>
             <span css={titleLabel}>portfolio</span>

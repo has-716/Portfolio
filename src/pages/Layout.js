@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 const root = css`
     margin: 0 auto;
     width: 88.88%;
+    max-width: 1440px;
     @media (max-width: 768px) {
         width: 100%;
     }

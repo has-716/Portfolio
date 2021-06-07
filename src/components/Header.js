@@ -7,7 +7,7 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Logo from "../../images/icon/oskworks.svg"
+import Logo from "../../contents/images/icon/oskworks.svg"
 
 const root = css`
     align-items: center;

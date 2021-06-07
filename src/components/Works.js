@@ -8,6 +8,7 @@ import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { About } from "./About"
+import { Card } from "./Card"
 
 const root = css`
     background: ${color.surface.primary};
@@ -101,22 +102,7 @@ export const Works= () => (
         <section css={root} id="works">
             <h2 css={title}>works</h2>
             <div css={cardWrapper}>
-                <Link css={card} to="/">
-                    <StaticImage src="../../images/dummy.jpg" />
-                    <div css={cardContent}>
-                        <div css={cardInfomation}>
-                            <p css={cardGenreWrapper}>
-                                <span css={cardGenre}>Genre</span>
-                                <span css={cardGenre}>Genre</span>
-                            </p>
-                            <p css={cardDate}>2021/01/01</p>
-                        </div>
-                        <h3 css={cardTitle}>Title</h3>
-                        <p css={cardDescription}>Description</p>
-                    </div>
-                </Link>
-                <div css={card}></div>
-                <div css={card}></div>
+                <Card />
             </div>
         </section>
         <About/>

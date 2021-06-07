@@ -7,12 +7,12 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import GitHubIcon from "../../images/icon/SNS/GitHub.svg"
+import GitHubIcon from "../../contents/images/icon/SNS/GitHub.svg"
 
 const root = css`
     background: ${color.surface.primary};
     margin-top: 32px;
-    padding: 104px 24px;
+    padding: 104px 64px;
     @media (max-width: 768px) {
         padding: 24px 16px 32px;
         margin-top: 24px;
