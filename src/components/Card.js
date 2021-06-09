@@ -5,6 +5,7 @@ import { color, typography } from '../styles/Theme'
 import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { size } from '../styles/Size'
+import { GenreTag } from './GenreTag'
 
 const root = css`
     display: flex;
@@ -54,10 +55,6 @@ const infomation = css`
     }
 `
 
-const genre = css`
-    background: ${color.surface.secondary};
-`
-
 const title = css`
     ${typography.headline3}
 `
@@ -81,8 +78,8 @@ export const Card = () => {
                 frontmatter {
                     title
                     date(formatString: "YYYY, MM")
-                    tags
                     slug
+                    tags
                     hero {
                         childImageSharp {
                             gatsbyImageData(width: 611, quality: 75, layout: CONSTRAINED)
@@ -103,11 +100,10 @@ export const Card = () => {
                 <h3 css={title}>{edge.node.frontmatter.title}</h3>
                 <p css={description}>ここに作品の説明が入ります。２行以上は「…」表示になる予定。</p>
                 <div css={infomation}>
-                    <span css={genre}>{edge.node.frontmatter.tags}</span>
+                    <GenreTag  tags={edge.node.frontmatter.tags} />
                     <span>{edge.node.frontmatter.date}</span>
                 </div>
             </div>
         </Link>
     ))
 }
-  
