@@ -29,11 +29,10 @@ const title = css`
 
 const cardWrapper = css`
     display: grid;
-    grid-template-columns: repeat(3,4fr);
-    grid-gap: 16px;
+    grid-gap: 80px;
     margin-top: 3em;
     @media (max-width: 768px) {
-        grid-template-columns: repeat(1,12fr);
+        grid-gap: 40px;
     }
 `
 
