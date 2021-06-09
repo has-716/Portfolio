@@ -7,7 +7,6 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { About } from "./About"
 import { Card } from "./Card"
 
 const root = css`
@@ -43,6 +42,5 @@ export const Works= () => (
                 <Card />
             </div>
         </section>
-        <About/>
     </>
 )
