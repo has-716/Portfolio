@@ -10,23 +10,23 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const root = css`
     position: relative;
-    width: 100vw;
     margin: 0 calc(50% - 50vw);
+    width: 100vw;
 `
 
 const title = css`
-    color: ${color.text.accentPrimary};
     ${typography.headline1};
+    color: ${color.text.accentPrimary};
     line-height: 1.2;
+    padding: 0 6vw;
     position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
-    padding-left: 10%;
 `
 const titleLabel = css`
     background-color:${baseColor.white[100]};
     display: inline-block;
-    padding: 4px 0;
+    padding-bottom: 2px;
     :not(:first-child) {
         margin-top: 0.2em;  
     }

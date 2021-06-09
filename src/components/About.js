@@ -7,72 +7,102 @@ import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Name from "../../contents/images/icon/osk.svg"
 
 const root = css`
-    background: ${color.surface.primary};
-    display: flex;
-    margin-top: 32px;
-    padding: 104px 64px;
+    padding: 120px 8vw;
     @media (max-width: 768px) {
-        grid-template-columns: repeat(1,12fr);
-        padding: 24px 16px 32px;
-        margin-top: 24px;
-        flex-direction: column;
+    padding: 60px 6vw;
     }
 `
-const image = css`
+
+const about = css`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6em;
     @media (max-width: 768px) {
-        margin-top: 32px;
-        order: 1;
+        flex-direction: column;
+        margin-top: 4em;
+    }
+`
+
+const image = css`
+    flex: 0 0 50%;
+    @media (max-width: 768px) {
     }
 `
 const content = css`
-    order: 2;
-    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 0 5vw;
+    justify-content: center;
     @media (max-width: 768px) {
-        margin-top: 32px;
-        text-align: center;
-        align-items: center;
+        margin-top: 2.6em;
+        padding: 0;
     }
 `
-const infomation = css`
-    align-items: center;
-    padding: ${size[24]};
-    margin-left: 16px;
-    @media (max-width: 768px) {
-        display: contents;
-    }
-`
+
 const title = css`
     ${typography.headline2}
     color: ${color.text.highEmphasis};
+    text-align: center;
+    @media (max-width: 768px) {
+        text-align: left;
+    }
     
 `
+
 const name = css`
-    fill: ${baseColor.primary[80]};
+    ${typography.headline3}
 `
 const role = css`
+    ${typography.overline}
     color: ${color.text.lowEmphasis};
-    margin-top: 4px;
+    margin-top: 0.4em;
 `
 const introduction = css`
-    margin-top: 24px;
+    ${typography.body.normal}
+    color: ${color.text.middleEmphasis};
+    margin-top: 3em;
     text-align: left;
+    @media (max-width: 768px) {
+        margin-top: 1.9em;
+    }
+`
+
+const skillWrapper = css`
+    ${typography.overline}
+    margin-top: 2em;
+`
+
+const skill = css`
+    :not(:first-child){
+        margin-left:8px;
+    }
+    background: ${color.surface.secondary};
 `
 
 export const About = () => (
     <section css={root}>
-        <StaticImage src="../../contents/images/dummy.jpg" css={image} />
-        <div css={infomation}>
-                <h2 css={title}>about</h2>
-                    <div css={content}>
-                        <Name css={name} />
-                        <p css={role}>
-                            <span>UI Designer</span>
-                        </p>
-                        <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
-                </div>
+        <h2 css={title}>ABOUT</h2>
+        <div css={about}>
+            <StaticImage src="../../contents/images/dummy.jpg" css={image} />
+            <div css={content}>
+                <p css={name}>DAISUKE HASEGAWA</p>
+                <p css={role}>
+                    <span>UI Designer</span>
+                </p>
+                <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+                <p css={skillWrapper}>
+                    <span css={skill}>UI</span>
+                    <span css={skill}>UX</span>
+                    <span css={skill}>GRAPHIC</span>
+                    <span css={skill}>HTML</span>
+                    <span css={skill}>CSS</span>
+                    <span css={skill}>REACT.JS</span>
+                    <span css={skill}>GATSBY.JS</span>
+                </p>
+            </div>
         </div>
     </section>
 )

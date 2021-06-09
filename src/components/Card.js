@@ -8,12 +8,6 @@ import { size } from '../styles/Size'
 const root = css`
     display: flex;
     justify-content: space-between;
-    @media (min-width: 767px) {
-        align-items: center;
-        :nth-child(even) {
-            flex-direction: row-reverse;
-        }
-    }
     @media (max-width: 768px) {
         flex-direction: column;
         :nth-child(even) {
@@ -22,6 +16,12 @@ const root = css`
         :hover {
             background-color: ${color.surface.teriary};
             border-radius: 4px;
+        }
+    }
+    @media (min-width: 769px) {
+        align-items: center;
+        :nth-child(even) {
+            flex-direction: row-reverse;
         }
     }
 
@@ -37,7 +37,7 @@ const content = css`
     flex: 1 1 auto;
     padding: 0 5vw;
     @media (max-width: 768px) {
-        margin-top: 3.2em;
+        margin-top: 2.6em;
         padding: 0;
     }
 `
@@ -66,7 +66,7 @@ const description = css`
     color: ${color.text.middleEmphasis};
     margin-top: 3em;
     @media (max-width: 768px) {
-        margin-top: 1.7em;
+        margin-top: 1.9em;
     }
 `
 

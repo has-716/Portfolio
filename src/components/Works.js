@@ -11,10 +11,9 @@ import { About } from "./About"
 import { Card } from "./Card"
 
 const root = css`
-    background: ${color.surface.primary};
-    margin: 120px 8vw;
+    padding: 120px 8vw;
     @media (max-width: 768px) {
-    margin: 60px 6vw;
+    padding: 60px 6vw 90px;
     }
 `
 

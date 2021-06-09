@@ -8,18 +8,20 @@ import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Logo from "../../contents/images/icon/oskworks.svg"
+import GitHubIcon from "../../contents/images/icon/SNS/GitHub.svg"
+import TwitterIcon from "../../contents/images/icon/SNS/Twitter.svg"
 
 const root = css`
     align-items: center;
     background: ${baseColor.white[100]};
     border-bottom: 1px solid ${baseColor.gray.alpha[10]};
     display: flex;
-    height: 136px;
-    padding: ${size[24]};
+    height: 88px;
+    justify-content: space-between;
+    padding: 0 6vw ;
     position: sticky;
     top: 0;
     z-index: 1;
-    justify-content: space-between;
     @media (max-width: 768px) {
         height: 88px;
         position: static;
@@ -31,23 +33,29 @@ const logo = css`
 `
 
 const navigation = css`
-    display: flex;
-    align-items: center;
-    @media (max-width: 768px) {
-        display: none;
-    }
+    display: block;
 `
-const navigationItem = css`
-    padding: ${size[8]} ${size[24]};
+
+const icon = css`
+    margin-left: 1vw;
+    padding: 8px;
+    height: 48px;
+    width: 48px;
     :hover {
         background-color: ${color.surface.teriary};
         border-radius: 4px;
     }
 `
-const navigationDivider = css`
-    ${typography.headline3}
-    color: ${color.text.disable};
-    margin: 0 ${size[8]};
+
+const github = css`
+    fill: #171516;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
+const twitter = css`
+    fill: #1da1f2;
 `
 
 export const Header = () => (
@@ -56,12 +64,11 @@ export const Header = () => (
             <Logo css={logo}/>
         </Link>
         <nav css={navigation}>
-            <Link css={navigationItem} to="#works">
-                <p>works</p>
+            <Link to="https://github.com/" >
+                <GitHubIcon css={[icon, github]} />
             </Link>
-            <span css={navigationDivider}>/</span>
-            <Link css={navigationItem} to="#about">
-                <p>about</p>
+            <Link to="https://twitter.com/" >
+                <TwitterIcon css={[icon, twitter]} />
             </Link>
         </nav>
     </header>

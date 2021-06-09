@@ -60,7 +60,7 @@ export const baseColor = {
             80:'#08151ACC',
             70:'#08151AB3',
             60:'#08151A9E',
-            50:'#08151A80',
+            50:'#08151A94',
             40:'#08151A66',
             30:'#08151A4D',
             20:'#08151A33',
@@ -72,7 +72,7 @@ export const baseColor = {
         80:'#394447',
         70:'#525B5E',
         60:'#636B6E',
-        50:'#838A8C',
+        50:'#70777A',
         40:'#9CA2A3',
         30:'#B5B9BA',
         20:'#CDD0D1',
@@ -103,12 +103,12 @@ export const color = {
 
  const headline1 = css`
     ${englishFont}
-    font-size: 6rem;
-    font-weight: 600;
-    letter-spacing: .4em;
-    line-height: 1.6;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: .2em;
+    line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 `
 
@@ -117,33 +117,42 @@ export const color = {
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .4em;
-    line-height: 1.6;
+    line-height: 1.6em;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 `
 
  const headline3 = css`
     ${englishFont}
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .4em;
-    line-height: 1.6;
+    line-height: 1.6em;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 `
 
  const bodyNormal = css`
     ${japaneseFont}
-    font-size: 1.4em;
-    line-height: 2.2;
+    font-size: 1.4rem;
+    line-height: 2.2em;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 `
 
  const bodyBold = css`
     ${bodyNormal}
-    font-weight: 500;
+    font-weight: 700;
 `
 
  const overline = css`
     ${englishFont}
     font-size: 1.2rem;
     letter-spacing: .2em;
-    line-height: 1.5;
+    line-height: 1.5em;
 `
 
 export const typography = {
