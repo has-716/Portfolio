@@ -2,20 +2,6 @@ import React from 'react'
 
 import { Global, css } from '@emotion/react'
 import { color, typography } from './Theme'
-import 'fontsource-oswald'
-import 'fontsource-oswald/200.css'
-import 'fontsource-oswald/300.css'
-import 'fontsource-oswald/400.css'
-import 'fontsource-oswald/500.css'
-import 'fontsource-oswald/600.css'
-import 'fontsource-oswald/700.css'
-import 'fontsource-noto-sans-jp'
-import 'fontsource-noto-sans-jp/100.css'
-import 'fontsource-noto-sans-jp/300.css'
-import 'fontsource-noto-sans-jp/400.css'
-import 'fontsource-noto-sans-jp/500.css'
-import 'fontsource-noto-sans-jp/700.css'
-import 'fontsource-noto-sans-jp/900.css'
 
 
 const reset = css`
@@ -33,12 +19,10 @@ html {
   background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
-  font-family: 
-  'Oswald',
-  'Noto Sans JP',
-  sans-serif;
+  font-size: 10px;
+  font-feature-settings: "palt";
   -webkit-text-size-adjust: 100%;
-  word-break: normal;
+  word-break: break-all;
   -moz-tab-size: 4;
   tab-size: 4;
 }
@@ -64,6 +48,10 @@ html {
 /* # =================================================================
    # General elements
    # ================================================================= */
+
+h3 {
+  font-size: 100%;
+}
 
 hr {
   overflow: visible; /* Show the overflow in Edge and IE */
@@ -312,11 +300,14 @@ progress {
 
 const base = css`
     body {
-        ${typography.body.normal};
+      ${typography.body.normal};
+      font-size: 1.4rem;
+      letter-spacing: .3em;
+
     }
 
     a {
-        color: inherit;
+      color: inherit;
     }
 `
 
