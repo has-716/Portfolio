@@ -86,7 +86,7 @@ export const About = () => (
     <section css={root}>
         <h2 css={title}>ABOUT</h2>
         <div css={about}>
-            <StaticImage src="../../contents/images/dummy.jpg" css={image} />
+            <StaticImage src="../../contents/images/profile.jpg" css={image} />
             <div css={content}>
                 <p css={name}>DAISUKE HASEGAWA</p>
                 <p css={role}>
