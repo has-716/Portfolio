@@ -15,13 +15,21 @@ const genre = css`
     }
 `
 
+const infomation = css`
+    ${typography.overline}
+    display: flex;
+    color: ${color.text.middleEmphasis};
+    margin-top: 4em;
+    @media (max-width: 768px) {
+        margin-top: 1.6em;
+    }
+`
+
 export const GenreTag = ({ tags }) => {
-    const tagitems = tags.map((tag) => <span css={genre} key={tag}>{tag}</span>)
+    const tagitems = tags.map((tag) => <span css={genre} key={tag}>{tag.fieldValue || tag } </span>)
     return (
-        <div>
-            <p css={root}>
-                {tagitems}
-            </p>
-        </div>
+        <p css={infomation}>
+            {tagitems}
+        </p>
     )
 }

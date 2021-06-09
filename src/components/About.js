@@ -5,8 +5,9 @@ import { css } from "@emotion/react"
 import { GlobalStyle } from "../styles/GlobalStyle"
 import { size } from "../styles/Size"
 import { baseColor, color, typography } from "../styles/Theme"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import { GenreTag } from "./GenreTag"
 
 const root = css`
     padding: 120px 8vw;
@@ -82,27 +83,37 @@ const skill = css`
     background: ${color.surface.secondary};
 `
 
-export const About = () => (
-    <section css={root}>
-        <h2 css={title}>ABOUT</h2>
-        <div css={about}>
-            <StaticImage src="../../contents/images/profile.jpg" css={image} />
-            <div css={content}>
-                <p css={name}>DAISUKE HASEGAWA</p>
-                <p css={role}>
-                    <span>UI Designer</span>
-                </p>
-                <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
-                <p css={skillWrapper}>
-                    <span css={skill}>UI</span>
-                    <span css={skill}>UX</span>
-                    <span css={skill}>GRAPHIC</span>
-                    <span css={skill}>HTML</span>
-                    <span css={skill}>CSS</span>
-                    <span css={skill}>REACT.JS</span>
-                    <span css={skill}>GATSBY.JS</span>
-                </p>
+export const About = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            allMdx {
+                group(field: frontmatter___tags) {
+                    fieldValue
+                }
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                        }
+                    }
+                }
+            }
+        }
+    `)
+    return (
+        <section css={root}>
+            <h2 css={title}>ABOUT</h2>
+            <div css={about}>
+                <StaticImage src="../../contents/images/profile.jpg" css={image} />
+                <div css={content}>
+                    <p css={name}>DAISUKE HASEGAWA</p>
+                    <p css={role}>
+                        <span>UI Designer</span>
+                    </p>
+                    <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+                    <GenreTag tags={data.allMdx.group} />
+                </div>
             </div>
-        </div>
-    </section>
-)
+        </section>
+    )
+  }

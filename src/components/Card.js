@@ -95,14 +95,11 @@ export const Card = () => {
   `)
     return data.allMdx.edges.map(edge => (
         <Link to='#' key={edge.node.id} css={root}>
-            <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image}/>
+            <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image}　/>
             <div css={content}>
                 <h3 css={title}>{edge.node.frontmatter.title}</h3>
                 <p css={description}>ここに作品の説明が入ります。２行以上は「…」表示になる予定。</p>
-                <div css={infomation}>
-                    <GenreTag  tags={edge.node.frontmatter.tags} />
-                    <span>{edge.node.frontmatter.date}</span>
-                </div>
+                <GenreTag  tags={edge.node.frontmatter.tags} />
             </div>
         </Link>
     ))
