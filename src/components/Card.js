@@ -6,48 +6,68 @@ import { StaticImage } from "gatsby-plugin-image"
 import { size } from '../styles/Size'
 
 const root = css`
-    padding: ${size[24]};
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: 767px) {
+        align-items: center;
+        :nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
     @media (max-width: 768px) {
-        padding: 0;
-        :not(:first-child) {
-            margin-top: 16px;
+        flex-direction: column;
+        :nth-child(even) {
+            flex-direction: column;
         }
         :hover {
             background-color: ${color.surface.teriary};
             border-radius: 4px;
         }
     }
+
+`
+
+const image = css`
+    flex: 0 0 60%;
+    @media (max-width: 768px) {
+    }
 `
 
 const content = css`
-    margin-top: ${size[8]};
-    padding: ${size[8]};
+    flex: 1 1 auto;
+    padding: 0 5vw;
     @media (max-width: 768px) {
+        margin-top: 3.2em;
         padding: 0;
     }
 `
 
 const infomation = css`
     ${typography.overline}
-    color: ${color.text.disable};
     display: flex;
+    color: ${color.text.middleEmphasis};
     justify-content: space-between;
-`
-
-const genre = css`
-    display: inline-grid;
-    grid-gap: 8px;
-    :not(:first-child) {
-        margin-left: ${size[8]};
+    margin-top: 2em;
+    @media (max-width: 768px) {
+        margin-top: 1.6em;
     }
 `
 
+const genre = css`
+    background: ${color.surface.secondary};
+`
+
 const title = css`
-    margin-top: ${size[4]};
+    ${typography.headline3}
 `
 
 const description = css`
-    color: ${color.text.lowEmphasis};
+    ${typography.body.normal}
+    color: ${color.text.middleEmphasis};
+    margin-top: 3em;
+    @media (max-width: 768px) {
+        margin-top: 1.7em;
+    }
 `
 
 export const Card = () => {
@@ -72,16 +92,14 @@ export const Card = () => {
   `)
     return data.allMdx.edges.map(edge => (
         <Link to='#' key={edge.node.id} css={root}>
-            <StaticImage src="../../contents/images/dummy.jpg" />
+            <StaticImage src="../../contents/images/dummy.jpg" css={image}/>
             <div css={content}>
+                <h3 css={title}>{edge.node.frontmatter.title}</h3>
+                <p css={description}>ここに作品の説明が入ります。２行以上は「…」表示になる予定。</p>
                 <div css={infomation}>
-                    <div>
-                        <span css={genre}>{edge.node.frontmatter.tags}</span>
-                    </div>
+                    <span css={genre}>{edge.node.frontmatter.tags}</span>
                     <span>{edge.node.frontmatter.date}</span>
                 </div>
-                <h3 css={title}>{edge.node.frontmatter.title}</h3>
-                <p css={description}></p>
             </div>
         </Link>
     ))

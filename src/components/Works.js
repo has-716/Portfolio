@@ -30,9 +30,9 @@ const title = css`
 const cardWrapper = css`
     display: grid;
     grid-gap: 80px;
-    margin-top: 3em;
+    margin-top: 6em;
     @media (max-width: 768px) {
-        grid-gap: 40px;
+        grid-gap: 60px;
     }
 `
 

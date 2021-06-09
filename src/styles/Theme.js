@@ -104,7 +104,7 @@ export const color = {
  const headline1 = css`
     ${englishFont}
     font-size: 6rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .4em;
     line-height: 1.6;
     @media (max-width: 768px) {
@@ -115,7 +115,7 @@ export const color = {
  const headline2 = css`
     ${englishFont}
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .4em;
     line-height: 1.6;
 `
@@ -123,19 +123,20 @@ export const color = {
  const headline3 = css`
     ${englishFont}
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .4em;
     line-height: 1.6;
 `
 
  const bodyNormal = css`
     ${japaneseFont}
+    font-size: 1.4em;
     line-height: 2.2;
 `
 
  const bodyBold = css`
     ${bodyNormal}
-    font-weight: 600;
+    font-weight: 500;
 `
 
  const overline = css`

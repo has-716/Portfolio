@@ -300,10 +300,6 @@ progress {
 
 const base = css`
     body {
-      ${typography.body.normal};
-      font-size: 1.4rem;
-      letter-spacing: .3em;
-
     }
 
     a {
