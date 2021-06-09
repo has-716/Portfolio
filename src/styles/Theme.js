@@ -1,4 +1,33 @@
 import { css } from '@emotion/react'
+import 'fontsource-oswald'
+import 'fontsource-oswald/200.css'
+import 'fontsource-oswald/300.css'
+import 'fontsource-oswald/400.css'
+import 'fontsource-oswald/500.css'
+import 'fontsource-oswald/600.css'
+import 'fontsource-oswald/700.css'
+import 'fontsource-noto-sans-jp'
+import 'fontsource-noto-sans-jp/100.css'
+import 'fontsource-noto-sans-jp/300.css'
+import 'fontsource-noto-sans-jp/400.css'
+import 'fontsource-noto-sans-jp/500.css'
+import 'fontsource-noto-sans-jp/700.css'
+import 'fontsource-noto-sans-jp/900.css'
+
+const englishFont = css`
+    font-family:
+        'Oswald',
+        'Noto Sans JP',
+        sans-serif
+    ;  
+`
+
+const japaneseFont = css`
+    font-family:
+        'Noto Sans JP',
+        sans-serif
+    ;  
+`
 
 export const baseColor = {
     primary: {
@@ -64,7 +93,7 @@ export const color = {
         accentSecondary: baseColor.accent[80],
         disable: baseColor.gray[30],
     },
-    background: baseColor.gray[5],
+    background: baseColor.white[100],
     surface: {
         primary: baseColor.white[100],
         secondary: baseColor.gray.alpha[5],
@@ -73,42 +102,47 @@ export const color = {
 }
 
  const headline1 = css`
-    font-size: 64px;
-    font-weight: bold;
-    line-height: 1.5;
-    letter-spacing: .01em;
+    ${englishFont}
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: .4em;
+    line-height: 1.6;
     @media (max-width: 768px) {
-        font-size: 32px;
+        font-size: 3rem;
     }
 `
 
  const headline2 = css`
-    font-size: 40px;
-    line-height: 1.5;
-    letter-spacing: .02em;
+    ${englishFont}
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .4em;
+    line-height: 1.6;
 `
 
  const headline3 = css`
-    font-size: 24px;
-    line-height: 1.5;
-    letter-spacing: .02em;
+    ${englishFont}
+    font-size: 1.4em;
+    font-weight: 500;
+    letter-spacing: .4em;
+    line-height: 1.6;
 `
 
  const bodyNormal = css`
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: .01em;
+    ${japaneseFont}
+    line-height: 2.2;
 `
 
  const bodyBold = css`
     ${bodyNormal}
-    font-weight: bold;
+    font-weight: 600;
 `
 
  const overline = css`
-    font-size: 12px;
+    ${englishFont}
+    font-size: 1.2rem;
+    letter-spacing: .2em;
     line-height: 1.5;
-    letter-spacing: .02em;
 `
 
 export const typography = {
