@@ -2,6 +2,13 @@ import React from 'react'
 
 import { Global, css } from '@emotion/react'
 import { color, typography } from './Theme'
+import 'fontsource-oswald'
+import 'fontsource-oswald/200.css'
+import 'fontsource-oswald/300.css'
+import 'fontsource-oswald/400.css'
+import 'fontsource-oswald/500.css'
+import 'fontsource-oswald/600.css'
+import 'fontsource-oswald/700.css'
 import 'fontsource-noto-sans-jp'
 import 'fontsource-noto-sans-jp/100.css'
 import 'fontsource-noto-sans-jp/300.css'
@@ -26,7 +33,10 @@ html {
   background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 
+  'Oswald',
+  'Noto Sans JP',
+  sans-serif;
   -webkit-text-size-adjust: 100%;
   word-break: normal;
   -moz-tab-size: 4;
