@@ -44,17 +44,6 @@ const content = css`
     }
 `
 
-const infomation = css`
-    ${typography.overline}
-    display: flex;
-    color: ${color.text.middleEmphasis};
-    justify-content: space-between;
-    margin-top: 2em;
-    @media (max-width: 768px) {
-        margin-top: 1.6em;
-    }
-`
-
 const title = css`
     ${typography.headline3}
 `
@@ -63,6 +52,10 @@ const description = css`
     ${typography.body.normal}
     color: ${color.text.middleEmphasis};
     margin-top: 3em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     @media (max-width: 768px) {
         margin-top: 1.9em;
     }
@@ -78,6 +71,7 @@ export const Card = () => {
                 slug
                 frontmatter {
                     title
+                    description
                     date(formatString: "YYYY, MM")
                     slug
                     tags
@@ -99,7 +93,7 @@ export const Card = () => {
             <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image}　/>
             <div css={content}>
                 <h3 css={title}>{edge.node.frontmatter.title}</h3>
-                <p css={description}>ここに作品の説明が入ります。２行以上は「…」表示になる予定。</p>
+                <p css={description}>{edge.node.frontmatter.description}</p>
                 <GenreTag  tags={edge.node.frontmatter.tags} />
             </div>
         </Link>
