@@ -75,6 +75,7 @@ export const Card = () => {
           edges {
             node {
                 id
+                slug
                 frontmatter {
                     title
                     date(formatString: "YYYY, MM")
@@ -94,7 +95,7 @@ export const Card = () => {
       
   `)
     return data.allMdx.edges.map(edge => (
-        <Link to='#' key={edge.node.id} css={root}>
+        <Link to={edge.node.slug} key={edge.node.id} css={root}>
             <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image}　/>
             <div css={content}>
                 <h3 css={title}>{edge.node.frontmatter.title}</h3>
