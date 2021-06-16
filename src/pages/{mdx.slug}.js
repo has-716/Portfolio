@@ -8,7 +8,7 @@ import { Header } from "../components/Header";
 import { WorkVisual } from "../components/MainVisual";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { GenreTag } from "../components/GenreTag";
-import TableOfContents from "../components/TableOfContents";
+import { Contents} from "../components/TableOfContents";
 
 const image = css`
   position: relative;
@@ -109,7 +109,7 @@ const PostPage = ({ data }) => (
             {data.mdx.body}
           </MDXRenderer>
         </article>
-        <TableOfContents toc={data.mdx.tableOfContents.items} css={index}/>
+        <Contents toc={data.mdx.tableOfContents} css={index}/>
       </section>
     </Layout>
   </>

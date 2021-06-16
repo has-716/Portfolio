@@ -1,7 +1,33 @@
+import { Link } from 'gatsby'
 import React from 'react'
-import { css } from "@emotion/react"
 
-const TableOfContents = ({ toc }) => {
-    return <div dangerouslySetInnerHTML={{ __html: toc }} />
+const ContentsList = ({ items }) => {
+  return (
+    <ul>
+        {items.map((item) => {
+            return <ContentsItem key={`${item.url}-item`} item={item} />
+        })}
+    </ul>
+  )
+}
+
+const ContentsItem = ({ item }) => (
+  <li>
+    <Link href={item.url}>{item.title}</Link>
+    {item.items && item.items.length && (
+      <ContentsList key={`${item.url}-list`} items={item.items} />
+    )}
+  </li>
+)
+
+export const Contents = ({ toc,...props }) => {
+  if (!toc.items) {
+    return null
   }
-export default TableOfContents
+
+  return (
+    <div {...props}>
+      <ContentsList items={toc.items} key="toc-list"/>
+    </div>
+  )
+}
