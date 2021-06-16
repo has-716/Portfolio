@@ -25,13 +25,10 @@ const root = css`
             flex-direction: row-reverse;
         }
     }
-
 `
 
 const image = css`
     flex: 0 0 60%;
-    @media (max-width: 768px) {
-    }
 `
 
 const content = css`
@@ -59,6 +56,7 @@ const description = css`
         margin-top: 1.9em;
     }
 `
+
 const genre = css`
     margin-top: 4em;
     @media (max-width: 768px) {

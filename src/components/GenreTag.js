@@ -2,16 +2,16 @@ import React from "react"
 
 import { css } from "@emotion/react"
 
-import { baseColor, color, typography } from "../styles/Theme"
+import { color, typography } from "../styles/Theme"
 
 const root = css`
 `
 
 const genre = css`
-    display: inline-block;
     background: ${color.surface.secondary};
-    text-transform: uppercase;
+    display: inline-block;
     margin-bottom: 4px;
+    text-transform: uppercase;
     :not(:last-child) {
         margin-right: 8px;
     }
