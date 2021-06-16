@@ -83,6 +83,13 @@ const skill = css`
     background: ${color.surface.secondary};
 `
 
+const genre = css`
+    margin-top: 4em;
+    @media (max-width: 768px) {
+        margin-top: 1.6em;
+    }
+`
+
 export const About = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -111,7 +118,7 @@ export const About = () => {
                         <span>UI Designer</span>
                     </p>
                     <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
-                    <GenreTag tags={data.allMdx.group} />
+                    <GenreTag tags={data.allMdx.group} css={genre}/>
                 </div>
             </div>
         </section>
