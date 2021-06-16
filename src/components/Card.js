@@ -60,6 +60,12 @@ const description = css`
         margin-top: 1.9em;
     }
 `
+const genre = css`
+    margin-top: 4em;
+    @media (max-width: 768px) {
+        margin-top: 1.6em;
+    }
+`
 
 export const Card = () => {
     const data = useStaticQuery(graphql`
@@ -90,11 +96,11 @@ export const Card = () => {
   `)
     return data.allMdx.edges.map(edge => (
         <Link to={edge.node.slug} key={edge.node.id} css={root}>
-            <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image}　/>
+            <GatsbyImage image={edge.node.frontmatter.hero.childImageSharp.gatsbyImageData} css={image} />
             <div css={content}>
                 <h3 css={title}>{edge.node.frontmatter.title}</h3>
                 <p css={description}>{edge.node.frontmatter.description}</p>
-                <GenreTag  tags={edge.node.frontmatter.tags} />
+                <GenreTag tags={edge.node.frontmatter.tags} css={genre}/>
             </div>
         </Link>
     ))
