@@ -1,9 +1,19 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { css } from "@emotion/react"
+
+const root = css`
+  margin-left: 1em;
+  list-style: none;
+`
+
+const listItem = css`
+  margin-top: 8px;
+`
 
 const ContentsList = ({ items }) => {
   return (
-    <ul>
+    <ul css={root}>
         {items.map((item) => {
             return <ContentsItem key={`${item.url}-item`} item={item} />
         })}
@@ -12,7 +22,7 @@ const ContentsList = ({ items }) => {
 }
 
 const ContentsItem = ({ item }) => (
-  <li>
+  <li css={listItem}>
     <Link href={item.url}>{item.title}</Link>
     {item.items && item.items.length && (
       <ContentsList key={`${item.url}-list`} items={item.items} />

@@ -39,12 +39,12 @@ const genre = css`
 `
 
 const content = css`
-    display: flex;
-    gap: 80px;
-    padding: 80px 8vw;
+  display: flex;
+  gap: 80px;
+  padding: 80px 8vw;
 `
-
 const index = css`
+  color: ${color.text.lowEmphasis};
   height: 100%;
   flex: 30%;
   position: sticky;
@@ -84,8 +84,7 @@ const body = css`
   }
   ul {
     color: ${color.text.lowEmphasis};
-    margin-left: 2em;
-    margin-top: 5.6em;
+    margin: 5.6em 0 0 2em;
   }
   p + ul {
     margin-top: 2em;
