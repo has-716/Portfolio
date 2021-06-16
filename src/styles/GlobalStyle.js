@@ -21,6 +21,7 @@ html {
   color: ${color.text.middleEmphasis};
   font-size: 10px;
   font-feature-settings: "palt";
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   word-break: break-all;
   -moz-tab-size: 4;

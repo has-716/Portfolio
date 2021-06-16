@@ -31,6 +31,7 @@ const image = css`
     @media (max-width: 768px) {
     }
 `
+
 const content = css`
     display: flex;
     flex-direction: column;
@@ -50,17 +51,18 @@ const title = css`
     @media (max-width: 768px) {
         text-align: left;
     }
-    
 `
 
 const name = css`
     ${typography.headline3}
 `
+
 const role = css`
     ${typography.overline}
     color: ${color.text.lowEmphasis};
     margin-top: 0.4em;
 `
+
 const introduction = css`
     ${typography.body.normal}
     color: ${color.text.middleEmphasis};
@@ -69,18 +71,6 @@ const introduction = css`
     @media (max-width: 768px) {
         margin-top: 1.9em;
     }
-`
-
-const skillWrapper = css`
-    ${typography.overline}
-    margin-top: 2em;
-`
-
-const skill = css`
-    :not(:first-child){
-        margin-left:8px;
-    }
-    background: ${color.surface.secondary};
 `
 
 const genre = css`
@@ -114,9 +104,7 @@ export const About = () => {
                 <StaticImage src="../../contents/images/profile.jpg" css={image} />
                 <div css={content}>
                     <p css={name}>DAISUKE HASEGAWA</p>
-                    <p css={role}>
-                        <span>UI Designer</span>
-                    </p>
+                    <p css={role}>UI Designer</p>
                     <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
                     <GenreTag tags={data.allMdx.group} css={genre}/>
                 </div>

@@ -10,6 +10,12 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { GenreTag } from "../components/GenreTag";
 import { Contents} from "../components/TableOfContents";
 
+const root = css`
+html {
+  scroll-behavior: smooth;
+}
+`
+
 const image = css`
   position: relative;
   margin: 0 calc(50% - 50vw);
@@ -43,6 +49,9 @@ const index = css`
   flex: 30%;
   position: sticky;
   top: 168px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const body = css`
@@ -95,7 +104,7 @@ const body = css`
 
 const PostPage = ({ data }) => (
   <>
-    <Layout>
+    <Layout css={root}>
       <GatsbyImage image={data.mdx.frontmatter.hero.childImageSharp.gatsbyImageData} css={image} />
       <section css={infomation}>
         <p>{data.mdx.frontmatter.date}</p>

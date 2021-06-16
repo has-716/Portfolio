@@ -9,13 +9,13 @@ const root = css`
     max-width: 1440px;
 `
 
-export const Layout = ({children}) => (
-    <>
+export const Layout = ({children,...props}) => (
+    <div>
         <GlobalStyle />
         <Header />
         <main css={root}>
             {children}
         </main>
         <Footer />
-    </>
+    </div>
 )

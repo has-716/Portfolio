@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { Link,　useStaticQuery, graphql } from 'gatsby'
-import { color, typography } from '../styles/Theme'
+import { baseColor, color, typography } from '../styles/Theme'
 import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { size } from '../styles/Size'
@@ -16,7 +16,6 @@ const root = css`
             flex-direction: column;
         }
         :hover {
-            background-color: ${color.surface.teriary};
             border-radius: 4px;
         }
     }
