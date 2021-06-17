@@ -44,7 +44,6 @@ const content = css`
   padding: 80px 8vw;
 `
 const index = css`
-  color: ${color.text.lowEmphasis};
   height: 100%;
   flex: 30%;
   position: sticky;
@@ -57,7 +56,7 @@ const index = css`
 const body = css`
   flex: 70%;
   h2 {
-    ${typography.headline2}
+    ${typography.headline3}
     color: ${color.text.highEmphasis};
     margin-top: 12em;
     :first-of-type {
@@ -65,12 +64,12 @@ const body = css`
     }
   }
   h3 {
-    ${typography.headline3}
+    ${typography.body.bold}
     color: ${color.text.middleEmphasis};
     margin-top: 6em;
   }
   h4 {
-    ${typography.headline3}
+    ${typography.body.bold}
     color: ${color.text.lowEmphasis};
     margin-top: 3em;
   }

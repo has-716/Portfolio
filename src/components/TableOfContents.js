@@ -1,8 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { css } from "@emotion/react"
+import { color, typography } from '../styles/Theme'
 
 const root = css`
+  ${typography.overline}
+  color: ${color.text.lowEmphasis};
   margin-left: 1em;
   list-style: none;
 `
