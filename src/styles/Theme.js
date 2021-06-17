@@ -108,7 +108,7 @@ export const color = {
     letter-spacing: .2em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 2.4rem;
     }
 `
 
@@ -119,7 +119,7 @@ export const color = {
     letter-spacing: .4em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 `
 
@@ -130,7 +130,7 @@ export const color = {
     letter-spacing: .4em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 `
 
