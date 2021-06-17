@@ -103,34 +103,34 @@ export const color = {
 
  const headline1 = css`
     ${englishFont}
-    font-size: 3rem;
+    font-size: 6.4rem;
     font-weight: 400;
     letter-spacing: .2em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 `
 
  const headline2 = css`
     ${englishFont}
-    font-size: 1.4rem;
+    font-size: 3.2rem;
     font-weight: 600;
     letter-spacing: .4em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: 2.4rem;
     }
 `
 
  const headline3 = css`
     ${englishFont}
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: .4em;
     line-height: 1.6em;
     @media (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 `
 
