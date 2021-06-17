@@ -106,7 +106,7 @@ export const About = () => {
         <section css={root}>
             <h2 css={title}>ABOUT</h2>
             <div css={about}>
-                <StaticImage src="../../contents/images/profile.jpg" css={image} aspectRatio={9/16} />
+                <StaticImage src="../../contents/images/profile.jpg" css={image} />
                 <div css={content}>
                     <p css={name}>{myData.name.en}</p>
                     <p css={role}>{myData.role.en}</p>
