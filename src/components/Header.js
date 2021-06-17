@@ -22,7 +22,6 @@ const root = css`
     top: 0;
     z-index: 2147483647;
     @media (max-width: 768px) {
-        height: 88px;
     }
 `
 
