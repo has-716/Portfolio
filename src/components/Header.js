@@ -13,18 +13,16 @@ import TwitterIcon from "../../contents/images/icon/SNS/Twitter.svg"
 
 const root = css`
     align-items: center;
-    background: ${baseColor.white[100]};
-    border-bottom: 1px solid ${baseColor.gray.alpha[10]};
     display: flex;
     height: 88px;
     justify-content: space-between;
+    mix-blend-mode: difference;
     padding: 0 6vw ;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2147483647;
     @media (max-width: 768px) {
         height: 88px;
-        position: static;
     }
 `
 
@@ -64,12 +62,6 @@ export const Header = () => (
             <Logo css={logo}/>
         </Link>
         <nav css={navigation}>
-            <Link to="https://github.com/" >
-                <GitHubIcon css={[icon, github]} />
-            </Link>
-            <Link to="https://twitter.com/" >
-                <TwitterIcon css={[icon, twitter]} />
-            </Link>
         </nav>
     </header>
 )
