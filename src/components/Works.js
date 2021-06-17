@@ -17,7 +17,7 @@ const root = css`
 `
 
 const title = css`
-    ${typography.headline2}
+    ${typography.headline3}
     color: ${color.text.highEmphasis};
     text-align: center;
     @media (max-width: 768px) {

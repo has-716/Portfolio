@@ -19,7 +19,7 @@ html {
   background: ${color.background};
   box-sizing: border-box;
   color: ${color.text.middleEmphasis};
-  font-size: 10px;
+  font-size: 62.5%;
   font-feature-settings: "palt";
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
