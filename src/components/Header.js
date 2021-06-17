@@ -8,15 +8,13 @@ import { baseColor, color, typography } from "../styles/Theme"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Logo from "../../contents/images/icon/oskworks.svg"
-import GitHubIcon from "../../contents/images/icon/SNS/GitHub.svg"
-import TwitterIcon from "../../contents/images/icon/SNS/Twitter.svg"
 
 const root = css`
     align-items: center;
     display: flex;
     height: 88px;
     justify-content: space-between;
-    mix-blend-mode: difference;
+    mix-blend-mode: multiply;
     padding: 0 6vw ;
     position: sticky;
     top: 0;
