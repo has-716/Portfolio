@@ -8,6 +8,7 @@ import { baseColor, color, typography } from "../styles/Theme"
 import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import { GenreTag } from "./GenreTag"
+import { myData } from "../infomation/MyData"
 
 const root = css`
     padding: 120px 8vw;
@@ -36,7 +37,7 @@ const content = css`
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: 0 5vw;
+    padding: 6rem 5vw;
     justify-content: center;
     @media (max-width: 768px) {
         margin-top: 2.6em;
@@ -56,12 +57,14 @@ const title = css`
 const name = css`
     ${typography.headline3}
     color: ${color.text.highEmphasis};
+    text-transform: uppercase;
 `
 
 const role = css`
     ${typography.overline}
     color: ${color.text.lowEmphasis};
     margin-top: 0.4em;
+    text-transform: uppercase;
 `
 
 const introduction = css`
@@ -69,6 +72,7 @@ const introduction = css`
     color: ${color.text.middleEmphasis};
     margin-top: 3em;
     text-align: left;
+    white-space: pre-wrap;
     @media (max-width: 768px) {
         margin-top: 1.9em;
     }
@@ -102,11 +106,11 @@ export const About = () => {
         <section css={root}>
             <h2 css={title}>ABOUT</h2>
             <div css={about}>
-                <StaticImage src="../../contents/images/profile.jpg" css={image} />
+                <StaticImage src="../../contents/images/profile.jpg" css={image} aspectRatio={9/16} />
                 <div css={content}>
-                    <p css={name}>DAISUKE HASEGAWA</p>
-                    <p css={role}>UI Designer</p>
-                    <p css={introduction}>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+                    <p css={name}>{myData.name.en}</p>
+                    <p css={role}>{myData.role.en}</p>
+                    <p css={introduction}>{myData.description}</p>
                     <GenreTag tags={data.allMdx.group} css={genre}/>
                 </div>
             </div>

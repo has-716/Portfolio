@@ -33,7 +33,7 @@ const image = css`
 
 const content = css`
     flex: 1 1 auto;
-    padding: 0 5vw;
+    padding: 2rem 5vw;
     @media (max-width: 768px) {
         margin-top: 2.6em;
         padding: 0;
