@@ -67,7 +67,7 @@ const genre = css`
 export const Card = () => {
     const data = useStaticQuery(graphql`
     query {
-        allMdx {
+        allMdx (sort: {order: DESC, fields: frontmatter___date}) {
           edges {
             node {
                 id
